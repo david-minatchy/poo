@@ -1,0 +1,70 @@
+<?php
+class Fantome {
+    private $nom="fantome";
+    private $couleur='blanc';
+    private $vitesse=1;
+    private $sante=10;
+
+    public function __construct($nom,$couleur) {
+        $this->setNom($nom);
+        $this->setCouleur($couleur);
+    }
+
+    public function getNom() {
+        return $this->nom;
+    }
+
+    public function setNom($nom) {
+        $this->nom = $nom;
+    }
+
+    public function getCouleur() {
+        return $this->couleur;
+    }
+
+    public function setCouleur($couleur) {
+        $this->couleur = $couleur;
+    }
+    
+    public function getGagnerPV() {
+        return $this->sante;
+    }
+    
+    public function setGagnerPV($sante) {
+        $this->sante += $sante;
+    }
+
+    public function getPerdrePV() {
+        return $this->sante;
+    }
+
+    public function setPerdrePv($sante) {
+        $this->sante -= $sante;
+        if($this->sante <= 0) {
+            $this->sante = 0;
+            echo  " désolé le fantome<br>".$this->nom." est mort";
+        }
+    }
+    public function getVitesse() {
+        return $this->vitesse;
+    }
+
+    public function setVitesse($vitesse) {
+        $this->vitesse = $vitesse;
+    }
+
+    
+}
+
+$clyde = new Fantome("Clyde", "jaune");
+$dolly = new Fantome("Dolly", "rose");
+
+$dolly->setGagnerPv(10);
+$dolly->setVitesse(2);
+
+$clyde->setPerdrePV(5);
+
+$clyde->setPerdrePv(10);
+
+?>
+
