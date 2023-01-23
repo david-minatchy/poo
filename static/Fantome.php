@@ -22,6 +22,10 @@ class Fantome {
     }
 }
 
+public static function compteur() {
+    return self::$compteur;
+}
+
 public function getId() {
     return $this->id;
 }
