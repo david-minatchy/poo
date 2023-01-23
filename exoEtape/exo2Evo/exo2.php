@@ -54,8 +54,8 @@ class Personnage {
 }
 
 
-$perso1 = new Personnage("Harry");
-$perso2 = new Personnage("Ron");
+$perso1 = new Personnage("bob");
+$perso2 = new Personnage("toby");
 
 
 
