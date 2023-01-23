@@ -36,6 +36,8 @@ class Cercle extends figure {
 $r = new Rectangle(2, 3);
 echo $r->zone(); 
 
+echo "<br>";
+
 $c = new Cercle(2);
 echo $c->zone(); 
 
